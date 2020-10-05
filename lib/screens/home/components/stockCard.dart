@@ -17,13 +17,13 @@ class StockCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.black,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
+        /*boxShadow: [
           BoxShadow(
             offset: Offset(0, 4),
             blurRadius: 20,
-            color: Color(0xFF000000).withOpacity(0.25),
+            color: Colors.white.withOpacity(0.25),
           ),
-        ],
+        ],*/
       ),
       child: Material(
         color: Colors.transparent,

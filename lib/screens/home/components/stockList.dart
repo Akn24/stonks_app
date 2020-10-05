@@ -20,11 +20,7 @@ class StockList extends StatelessWidget {
             press: (){
               Navigator.push(
                 context, 
-                MaterialPageRoute(
-                  builder: (context){
-                    return DetailsScreen(companyName: "Infosys");
-                  },
-                ),
+                MaterialPageRoute(builder: (context) => DetailsScreen(companyName: "Infosys")),
               );
             },
           ),

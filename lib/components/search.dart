@@ -3,12 +3,18 @@ import 'package:flutter_svg/svg.dart';
 import 'package:stonksapp/constant.dart';
 
 
-class SearchBox extends StatelessWidget {
+class SearchBox extends StatefulWidget {
   final ValueChanged<String> onChanged;
   const SearchBox({
     Key key, this.onChanged,
   }) : super(key: key);
 
+  @override
+  _SearchBoxState createState() => _SearchBoxState();
+}
+
+class _SearchBoxState extends State<SearchBox> {
+  TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +27,12 @@ class SearchBox extends StatelessWidget {
           ),
         ),
       child: TextField(
-        onChanged: onChanged,
+        onChanged: widget.onChanged,
+        controller: controller,
+            onSubmitted: (context) {
+              print(controller.text);
+            },
+        style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           border: InputBorder.none,
           icon: SvgPicture.asset("assets/icons/search.svg"),

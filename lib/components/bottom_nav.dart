@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stonksapp/screens/home/home_screen.dart';
+import 'package:stonksapp/screens/news/news.dart';
+import 'package:stonksapp/screens/profile/profile_screen.dart';
 
 class BottomNav extends StatelessWidget {
   const BottomNav({
@@ -66,7 +68,7 @@ class BottomNav extends StatelessWidget {
                 context, 
                 MaterialPageRoute(
                   builder: (context){
-                    return HomeScreen();
+                    return NewsScreen();
                   },
                 ),
               );
@@ -80,7 +82,7 @@ class BottomNav extends StatelessWidget {
                 context, 
                 MaterialPageRoute(
                   builder: (context){
-                    return HomeScreen();
+                    return ProfileScreen();
                   },
                 ),
               );
