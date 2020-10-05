@@ -22,7 +22,7 @@ class StockList extends StatelessWidget {
                 context, 
                 MaterialPageRoute(
                   builder: (context){
-                    return DetailsScreen("Infosys");
+                    return DetailsScreen(companyName: "Infosys");
                   },
                 ),
               );
@@ -36,7 +36,7 @@ class StockList extends StatelessWidget {
                 context, 
                 MaterialPageRoute(
                   builder: (context){
-                    return DetailsScreen();
+                    return DetailsScreen(companyName: "TCS");
                   },
                 ),
               );
@@ -44,8 +44,17 @@ class StockList extends StatelessWidget {
           ),
           StockCard(
             svgSrc: "assets/icons/burger_beer.svg",
-            title: "Burger & Beer",
-            press: (){},
+            title: "Microsoft",
+            press: (){
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context){
+                    return DetailsScreen(companyName: "Microsoft");
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),

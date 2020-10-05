@@ -4,6 +4,11 @@ import 'package:stonksapp/screens/details/components/company_img.dart';
 import 'package:stonksapp/screens/details/components/order.dart';
 
 class Body extends StatelessWidget {
+  final String company;
+  const Body({
+    Key key,
+    this.company
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,7 +17,7 @@ class Body extends StatelessWidget {
           imgSrc: "assets/images/burger.png",
         ),
         Expanded(
-            child: ComInfo(),
+            child: ComInfo(companyname: company),
           ),
       ],
     );
@@ -20,8 +25,9 @@ class Body extends StatelessWidget {
 }
 
 class ComInfo extends StatelessWidget {
+  final String companyname;
   const ComInfo({
-    Key key,
+    Key key, this.companyname,
   }) : super(key: key);
 
   @override
@@ -31,7 +37,7 @@ class ComInfo extends StatelessWidget {
       padding: EdgeInsets.all(20),
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.black,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(30),
           topRight: Radius.circular(30),
@@ -39,7 +45,7 @@ class ComInfo extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          shopeName(name: "Infosys"),
+          shopeName(name: companyname),
           Text(
             "Nowadays, making printed materials have become fast, easy and simple. If you want your promotional material to be an eye-catching object, you should make it colored. By way of using inkjet printer this is not hard to make. An inkjet printer is any printer that places extremely small droplets of ink onto paper to create an image.",
             style: TextStyle(

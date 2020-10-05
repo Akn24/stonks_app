@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:stonksapp/screens/home/home_screen.dart';
 
 class BottomNav extends StatelessWidget {
   const BottomNav({
@@ -10,10 +11,10 @@ class BottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 35),
-      height: 60,
+      height: 40,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.black,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
@@ -32,22 +33,58 @@ class BottomNav extends StatelessWidget {
           IconButton(
             icon: SvgPicture.asset(
               "assets/icons/home.svg"),
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context){
+                    return HomeScreen();
+                  },
+                ),
+              );
+            },
           ),
           IconButton(
             icon: SvgPicture.asset(
               "assets/icons/Following.svg"),
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context){
+                    return HomeScreen();
+                  },
+                ),
+              );
+            },
           ),
           IconButton(
             icon: SvgPicture.asset(
               "assets/icons/Glyph.svg"),
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context){
+                    return HomeScreen();
+                  },
+                ),
+              );
+            },
           ),
           IconButton(
             icon: SvgPicture.asset(
               "assets/icons/person.svg"),
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context){
+                    return HomeScreen();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),

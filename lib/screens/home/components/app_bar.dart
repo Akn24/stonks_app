@@ -4,7 +4,7 @@ import 'package:stonksapp/constant.dart';
 
 AppBar homeAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       elevation: 0,
       leading: IconButton(icon: SvgPicture.asset("assets/icons/menu.svg"),
       onPressed: (){

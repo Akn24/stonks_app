@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Stonks App',
       theme: ThemeData(
         primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.black,
         textTheme: TextTheme(
           body1: TextStyle(color: ksecondaryColor),
           body2: TextStyle(color: ksecondaryColor),

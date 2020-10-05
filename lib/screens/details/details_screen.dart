@@ -4,12 +4,17 @@ import 'package:stonksapp/screens/details/components/app_bar.dart';
 import 'package:stonksapp/screens/details/components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
+  final String companyName;
+  const DetailsScreen({
+    Key key, 
+    this.companyName,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: detailsAppBar(),
-      body: Body(),
+      body: Body(company: companyName),
     );
   }
 }
