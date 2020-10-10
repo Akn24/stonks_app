@@ -9,7 +9,7 @@ AppBar detailsAppBar(BuildContext context) {
           Icons.arrow_back,
           color: Colors.white,
         ), onPressed: () {
-          //Navigator.pop(context);
+          Navigator.pop(context);
         },
       ),
       actions: <Widget>[

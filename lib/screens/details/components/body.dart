@@ -11,14 +11,49 @@ class Body extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
-        ComImage(
-          imgSrc: "assets/images/burger.png",
-        ),
-        Expanded(
-            child: ComInfo(companyname: company),
+        Text(
+          company,
+          style: TextStyle(
+            color: Colors.white,
+            height: 1.5,
+            fontSize: 50,
+            fontWeight: FontWeight.bold,
           ),
+        ),
+        /*ComImage(
+          imgSrc: "assets/images/burger.png",
+        ),*/
+        SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            
+              child: ComInfo(companyname: company),
+            
+        ),
+        Container(
+          padding: EdgeInsets.all(20),
+          width: double.infinity,
+          color: Colors.black,
+          /*decoration: BoxDecoration(
+            color: Colors.black,
+          ),*/
+          child: Row(
+            children: <Widget>[
+              OrderButton(
+                str: "Buy",
+                size: size,
+                press: () {},
+              ),
+              OrderButton(
+                str: "Sell",
+                size: size,
+                press: () {},
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
@@ -32,7 +67,7 @@ class ComInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    
     return Container(
       padding: EdgeInsets.all(20),
       width: double.infinity,
@@ -47,25 +82,11 @@ class ComInfo extends StatelessWidget {
         children: <Widget>[
           shopeName(name: companyname),
           Text(
-            "Nowadays, making printed materials have become fast, easy and simple. If you want your promotional material to be an eye-catching object, you should make it colored. By way of using inkjet printer this is not hard to make. An inkjet printer is any printer that places extremely small droplets of ink onto paper to create an image.",
+            "HI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI",
+            textAlign: TextAlign.left,
             style: TextStyle(
               height: 1.5,
             ),
-          ),
-          SizedBox(height: size.height * 0.15),
-          Row(
-            children: <Widget>[
-              OrderButton(
-                str: "Buy",
-                size: size,
-                press: () {},
-              ),
-              OrderButton(
-                str: "Sell",
-                size: size,
-                press: () {},
-              ),
-            ],
           ),
         ],
       ),

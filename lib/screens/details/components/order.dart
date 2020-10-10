@@ -31,7 +31,7 @@ class OrderButton extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SvgPicture.asset("assets/icons/bag.svg"),
+                //SvgPicture.asset("assets/icons/bag.svg"),
                 SizedBox(width: 10),
                 Text(
                   str,
