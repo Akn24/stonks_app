@@ -26,19 +26,14 @@ class Body extends StatelessWidget {
         /*ComImage(
           imgSrc: "assets/images/burger.png",
         ),*/
-        SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            
-              child: ComInfo(companyname: company),
-            
+        Expanded(    
+            child: ComInfo(companyname: company),
         ),
+        
         Container(
           padding: EdgeInsets.all(20),
           width: double.infinity,
           color: Colors.black,
-          /*decoration: BoxDecoration(
-            color: Colors.black,
-          ),*/
           child: Row(
             children: <Widget>[
               OrderButton(
@@ -68,27 +63,30 @@ class ComInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return Container(
-      padding: EdgeInsets.all(20),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(30),
-        ),
-      ),
-      child: Column(
-        children: <Widget>[
-          shopeName(name: companyname),
-          Text(
-            "HI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI",
-            textAlign: TextAlign.left,
-            style: TextStyle(
-              height: 1.5,
-            ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+          child: Container(
+        padding: EdgeInsets.all(20),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
           ),
-        ],
+        ),
+        child: Column(
+          children: <Widget>[
+            shopeName(name: companyname),
+            Text(
+              "HI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHIuashduhiuasdigf\n",
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                height: 1.5,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
