@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:stonksapp/constant.dart';
-import 'package:stonksapp/screens/details/components/company_img.dart';
 import 'package:stonksapp/screens/details/components/order.dart';
 
 class Body extends StatelessWidget {
@@ -12,6 +11,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    print("oudshfasdf");
     return Column(
       children: <Widget>[
         Text(
@@ -23,13 +23,10 @@ class Body extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        /*ComImage(
-          imgSrc: "assets/images/burger.png",
-        ),*/
-        Expanded(    
-            child: ComInfo(companyname: company),
-        ),
         
+        Expanded(
+          child: ComInfo(companyname: company),
+        ),
         Container(
           padding: EdgeInsets.all(20),
           width: double.infinity,
@@ -62,12 +59,13 @@ class ComInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+    Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
           child: Container(
         padding: EdgeInsets.all(20),
         width: double.infinity,
+        height: size.height,
         decoration: BoxDecoration(
           color: Colors.black,
           borderRadius: BorderRadius.only(
@@ -75,11 +73,11 @@ class ComInfo extends StatelessWidget {
             topRight: Radius.circular(30),
           ),
         ),
-        child: Column(
+        child: ListView(
           children: <Widget>[
             shopeName(name: companyname),
             Text(
-              "HI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHI\nHIuashduhiuasdigf\n",
+              "nhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhi",
               textAlign: TextAlign.left,
               style: TextStyle(
                 height: 1.5,
