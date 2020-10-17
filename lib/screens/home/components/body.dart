@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stonksapp/components/search.dart';
-//import 'package:stonksapp/screens/home/components/category_list.dart';
+import 'package:stonksapp/constant.dart';
 import 'package:stonksapp/screens/home/components/infoCompany.dart';
 import 'package:stonksapp/screens/home/components/stockList.dart';
 
@@ -16,6 +16,10 @@ class Body extends StatelessWidget {
           ),
           //CategoryList(),
           StockList(),
+          Text(
+            "Info About Company",
+            style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor),
+          ),
           InfoCompany(),
         ],
       ),

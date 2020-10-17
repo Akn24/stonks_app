@@ -11,7 +11,6 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    print("oudshfasdf");
     return Column(
       children: <Widget>[
         Text(
@@ -76,11 +75,16 @@ class ComInfo extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             shopeName(name: companyname),
-            Text(
-              "nhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhinhi\nhi\nhihi\nhihi\nhi\nhi\nhi\nhi\nhi\nhihi\nhi",
-              textAlign: TextAlign.left,
-              style: TextStyle(
-                height: 1.5,
+            Padding(
+              padding: EdgeInsets.all(50),
+                child: Text(
+                "hi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\n",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  height: 1.5,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],

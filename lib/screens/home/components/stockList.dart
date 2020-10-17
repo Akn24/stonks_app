@@ -15,7 +15,7 @@ class StockList extends StatelessWidget {
       child: Row(
         children: <Widget>[
           StockCard(
-            svgSrc: "assets/icons/burger_beer.svg",
+            svgSrc: "assets/icons/Infosys-01.svg",
             title: "Infosys",
             press: (){
               Navigator.push(
@@ -25,21 +25,21 @@ class StockList extends StatelessWidget {
             },
           ),
           StockCard(
-            svgSrc: "assets/icons/chinese_noodles.svg",
-            title: "TCS",
+            svgSrc: "assets/icons/apple.svg",
+            title: "Apple",
             press: (){
               Navigator.push(
                 context, 
                 MaterialPageRoute(
                   builder: (context){
-                    return DetailsScreen(companyName: "TCS");
+                    return DetailsScreen(companyName: "Apple");
                   },
                 ),
               );
             },
           ),
           StockCard(
-            svgSrc: "assets/icons/burger_beer.svg",
+            svgSrc: "assets/icons/microsoft.svg",
             title: "Microsoft",
             press: (){
               Navigator.push(
