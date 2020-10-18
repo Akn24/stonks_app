@@ -13,11 +13,13 @@ class _FetchStockState extends State<FetchStock> {
     http.Response response = await http.get(
       'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=INFY&apikey=XQGC2FDRFUEVFV2L'
     );
+    setState((){
     sym = json.decode(response.body)['Global Quote']['01. symbol'];
     open = json.decode(response.body)['Global Quote']['02. open'];
     high = json.decode(response.body)['Global Quote']['03. high'];
     low = json.decode(response.body)['Global Quote']['04. low'];
     price = json.decode(response.body)['Global Quote']['05. price'];
+    });
     print(sym);
     print(open);
     print(high);
