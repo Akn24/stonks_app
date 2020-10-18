@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stonksapp/constant.dart';
+import 'package:stonksapp/screens/details/components/fetchStock.dart';
 import 'package:stonksapp/screens/details/components/order.dart';
 
 class Body extends StatelessWidget {
@@ -77,15 +78,7 @@ class ComInfo extends StatelessWidget {
             shopeName(name: companyname),
             Padding(
               padding: EdgeInsets.all(50),
-                child: Text(
-                "hi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\nhi\n",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  height: 1.5,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+                child: FetchStock(),
             ),
           ],
         ),

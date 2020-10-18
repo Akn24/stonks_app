@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class NewsScreen extends StatelessWidget {
   final String apiUrl =
-      'https://newsapi.org/v2/everything?q=apple&from=2020-10-01&to=2020-10-05&sortBy=popularity&apiKey=4b019b5d6037446e94b1b787bedb5d1d';
+      'https://newsapi.org/v2/everything?q=apple&from=2020-10-13&to=2020-10-18&sortBy=popularity&apiKey=4b019b5d6037446e94b1b787bedb5d1d';
   // static Route<dynamic> route() => MaterialPageRoute(
   //       builder: (context) => WatchList(),
   //     );
