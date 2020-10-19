@@ -3,15 +3,30 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class FetchStock extends StatefulWidget {
+  final String company;
+
+  const FetchStock({Key key, this.company}) : super(key: key);
   @override
-  _FetchStockState createState() => _FetchStockState();
+  _FetchStockState createState() => _FetchStockState(company);
 }
 
 class _FetchStockState extends State<FetchStock> {
   var sym,open,high,low,price;
+  String symbol,company;
+  _FetchStockState(this.company);
+  void fetchsym(){
+    if(company=='Infosys')
+      symbol='INFY';
+    else if(company=='Apple')
+      symbol='AAPL';
+    else if(company=='Microsoft')
+      symbol='MSFT';
+    else if(company=='IBM')
+      symbol='IBM';
+  }
   void getPrice() async{
     http.Response response = await http.get(
-      'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=INFY&apikey=XQGC2FDRFUEVFV2L'
+      'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=$symbol&apikey=XQGC2FDRFUEVFV2L'
     );
     setState((){
     sym = json.decode(response.body)['Global Quote']['01. symbol'];
@@ -28,6 +43,7 @@ class _FetchStockState extends State<FetchStock> {
   }
   @override
   Widget build(BuildContext context) {
+    fetchsym();
     getPrice();
     return Container(
         child: Column(

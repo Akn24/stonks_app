@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:stonksapp/constant.dart';
+import 'package:stonksapp/screens/details/details_screen.dart';
 
 
 class SearchBox extends StatefulWidget {
@@ -29,8 +30,16 @@ class _SearchBoxState extends State<SearchBox> {
       child: TextField(
         onChanged: widget.onChanged,
         controller: controller,
-            onSubmitted: (context) {
-              print(controller.text);
+            onSubmitted: (value) {
+              //print(controller.text);
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context){
+                    return DetailsScreen(companyName: controller.text);
+                  },
+                ),
+              );
             },
         style: TextStyle(color: Colors.white),
         decoration: InputDecoration(

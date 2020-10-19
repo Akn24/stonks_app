@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
         ),
       ),
       child: Text(
-            "NAME: Ankit\nEMAIL ID: ankitnath1999@gmail.com\nBALANCE: ${p.balance}",
+            "NAME: Stonks\nEMAIL ID: user@stonks.app\nBALANCE: ${p.balance}",
             style: TextStyle(
               height: 2.5,
             ),

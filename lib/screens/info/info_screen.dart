@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:stonksapp/constant.dart';
 import 'components/app_bar.dart';
 import 'components/info_body.dart';
 

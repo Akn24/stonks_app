@@ -78,7 +78,7 @@ class ComInfo extends StatelessWidget {
             shopeName(name: companyname),
             Padding(
               padding: EdgeInsets.all(50),
-                child: FetchStock(),
+                child: FetchStock(company:companyname),
             ),
           ],
         ),
